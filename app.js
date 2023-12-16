@@ -1,11 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Asegúrate de haber instalado el paquete cors con npm
 const sqlite3 = require('sqlite3').verbose();
+
 
 const app = express();
 
+app.use(cors()); // Habilita CORS para todas las rutas y orígenes
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // Crear y abrir la base de datos
 const db = new sqlite3.Database('./miBaseDeDatos.db', (err) => {
@@ -23,7 +27,7 @@ db.run(`CREATE TABLE IF NOT EXISTS todos (
 )`);
 
 app.get('/', (req, res) => {
-  res.send('Hola Mundo con Express y Node.js!');
+  res.send('Bienvenido al servidor de tareas.');
 });
 
 
@@ -56,3 +60,4 @@ process.on('SIGINT', () => {
     process.exit(0);
   });
 });
+

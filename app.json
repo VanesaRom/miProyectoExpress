@@ -1,0 +1,33 @@
+{
+    "expo": {
+      "name": "Proyecto Final",
+      "slug": "Programación de dispositivos móviles",
+      "version": "U4A4",
+      "orientation": "portrait",
+      "icon": "./assets/gatito.png",
+      "splash": {
+        "image": "./assets/pantalla.png",
+        "resizeMode": "contain",
+       // "backgroundColor": "#ffffff"
+      },
+    },
+  "updates": {
+    "fallbackToCacheTimeout": 0
+  },
+  "assetBundlePatterns": ["**/*"],
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./gatito.png",
+ //     "backgroundColor": "#FFFFFF"
+    }
+  },
+  "web": {
+    "favicon": "./gatito.png"
+  }
+}
+
+
+  
